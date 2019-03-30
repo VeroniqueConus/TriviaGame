@@ -12,37 +12,37 @@ $(document).ready(function () {
     {
         quote: "Just because you're a lesbian, it doesn't make you less of a bein'.",
         answer: ["Lisa","Grandpa","Marge"],
-        correctAnswer: "2",
+        correct: "2",
         image:("assets/images/marge.png")
     },
     {
         quote: "There's only one thing to do at a moment like this: strut!",
         answer: ["Homer","Bart","Milhouse"],
-        correctAnswer:"1",
+        correct:"1",
         image:("assets/images/bart.png")
     },
 {
     quote: "Your ideas are intriguing to me, and I wish to subscribe to your newsletter!",
     answer: ["Marge","Homer","Grandpa"],
-    correctAnswer: "1",
+    correct: "1",
     image:("assets/images/homer.png")
 },
 {
     quote: "I used to be with it, but then they changed what ‘it’ was, and now what I’m with isn’t it. And what’s ‘it’ seems weird and scary to me...it'll happen to YOU!",
     answer: ["Bart","Homer","Grandpa"],
-    correctAnswer: "2",
+    correct: "2",
     image:("assets/images/grandpa.png")
 },
 {
     quote: "You don’t win friends with salad.",
     answer: ["Millhouse","Homer","Bart"],
-    correctAnswer: "1",
+    correct: "1",
     image:("assets/images/homer.png")
 },
 {
     quote: "What’s the point of going out? We’re just gonna wind up back here anyway. ",
     answer: ["Homer","Marge", "Grandpa"],
-    correctAnswer: "0",
+    correct: "0",
     image:("assets/images/homer.png")
 }];
 
@@ -79,7 +79,7 @@ $(document).ready(function () {
                 correctAnswer();
             } else {
                 answered = true; //ends  timer
-                $('.quote').text("You picked: " + simpsonsQuotes[indexQandA].answer[id] + "D'oh! It was actually: " + simpsonsQuotes[indexQandA].answer[correct]);
+                $('.quote').text("You picked  " + simpsonsQuotes[indexQandA].answer[id] + ".  That's Right! " + simpsonsQuotes[indexQandA].answer[correct]);
                 incorrectAnswer();
             }
         });
@@ -95,7 +95,7 @@ $(document).ready(function () {
             clearInterval(intervalID);
         } else {
             timeRemaining--;
-            $('.timeRemaining').text('Okily dokily, you have ' + timeRemaining + ' seconds left neighborino!');
+            $('.timeRemaining').text('Okily dokily, you have ' + timeRemaining + ' seconds!');
         }
     }
 
@@ -109,7 +109,7 @@ $(document).ready(function () {
 
     function incorrectAnswer() {
         incorrectAnswers++;
-        $('.timeRemaining').text("D'oh! Wrong!").css({
+        $('.timeRemaining').text("Time's atickin'!").css({
             'color': '#3D414F'
         });
         resetRound();

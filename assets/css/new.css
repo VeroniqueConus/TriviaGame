@@ -34,9 +34,7 @@
     /* background-color: #000000; */
     padding: 0px;
     margin: 0px;
-    font-family: 'Terrain';
-    background-image: url("../images/background.jpg");
-  }
+ }
   
   .jumbotron h1 {
     font-size: 120px;
@@ -91,7 +89,6 @@
     font-size: 20px;
     letter-spacing: 2px;
     margin-top: 40px;
-    font-family: Abyssopelagic;
   }
   
   .answerImage {
